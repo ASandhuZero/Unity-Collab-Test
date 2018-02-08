@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float posX = transform.position.z + 1;
-		transform.position = new Vector3(0, 0, posX);
+		float posZ = transform.position.z + Mathf.Cos(transform.position.z);
+		transform.position = new Vector3(0, 0, posZ);
 		print(transform.position.x);
 	}
 }
